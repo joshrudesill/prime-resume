@@ -3,29 +3,11 @@
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 body {
-  display: flex;
-  justify-content: center;
+  display: block;
   margin-top: 20px;
-  background: rgb(99, 99, 99);
-  background: -moz-linear-gradient(
-    90deg,
-    rgba(99, 99, 99, 1) 0%,
-    rgba(82, 82, 82, 1) 50%,
-    rgba(99, 99, 99, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    90deg,
-    rgba(99, 99, 99, 1) 0%,
-    rgba(82, 82, 82, 1) 50%,
-    rgba(99, 99, 99, 1) 100%
-  );
-  background: linear-gradient(
-    90deg,
-    rgba(99, 99, 99, 1) 0%,
-    rgba(82, 82, 82, 1) 50%,
-    rgba(99, 99, 99, 1) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#636363",endColorstr="#636363",GradientType=1);
+
+  background-image: url("./images/bg3.jpg");
+  background-size: cover;
 }
 .flex-column {
   display: flex;
@@ -37,7 +19,6 @@ body {
   padding: 10px;
 }
 .border {
-  border: 1px solid black;
   border-radius: 10px;
 }
 .flex-center {
@@ -53,22 +34,41 @@ body {
 .heading-text {
   font-size: 3em;
   font-weight: 500;
+  color: bisque;
 }
 .header-bg {
-  background-color: beige;
+  background: rgb(29, 29, 29);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(29, 29, 29, 1) 53%,
+    rgba(99, 99, 99, 0) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(29, 29, 29, 1) 53%,
+    rgba(99, 99, 99, 0) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(29, 29, 29, 1) 53%,
+    rgba(99, 99, 99, 0) 100%
+  );
 }
 .header-bg:hover {
-  background-color: burlywood;
-  border-radius: 10px;
+  background-color: crimson;
   transition: 0.5s;
-  background-color: burlywood;
-  border-bottom: 10px solid black;
-  border-right: 3px solid black;
-  transform: translate(0, -5px);
+  transform: translate(-5px);
+}
+.skills {
+  background-color: bisque;
+  padding: 10px;
 }
 .italic {
   font-style: italic;
 }
 .flex-basis {
-  flex-basis: 50%;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
 }
