@@ -4,15 +4,59 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
     <title>Prime Resume - Josh Rudesill</title>
+    <script src="scripts.js" defer></script>
   </head>
   <body>
-    <section title="top-information" id="top-info" class="flex-basis">
-      <header class="flex-row flex-start border header-bg">
-        <span class="flex-pad heading-text">Josh Rudesill</span>
-        <span class="heading-text">-</span>
-        <span class="flex-pad heading-text italic">Web Developer</span>
+    <section title="Josh Rudesill" id="top-info" class="flex-basis">
+      <header class="flex-row flex-between border header-bg p-10">
+        <span class="flex-pad heading-text">
+          Josh Rudesill - <span class="italic">Web Developer</span>
+        </span>
+        <span class="flex-pad heading-text flex-end" id="code">&lt;/&gt;</span>
       </header>
+    </section>
+    <section class="flex-basis">
+      <div class="flex-row flex-between border contact-info">
+        <div class="contact-info-top">
+          <div class="flex-shrink contact-start">
+            <i class="material-icons">public</i>
+          </div>
+          <div class="flex-grow contact-end">Hudson, WI</div>
+        </div>
+
+        <div class="contact-info-top">
+          <div class="flex-shrink contact-start">
+            <i class="material-icons">phone</i>
+          </div>
+          <div class="flex-grow contact-end">(651) 491-5052</div>
+        </div>
+
+        <div class="contact-info-top">
+          <div class="flex-shrink contact-start">
+            <i class="material-icons">contact_mail</i>
+          </div>
+          <div class="flex-grow contact-end" style="letter-spacing: 0.5px">
+            joshrudesill@gmail.com
+          </div>
+        </div>
+
+        <div
+          class="contact-info-top"
+          style="cursor: pointer"
+          id="#linkedin"
+          onclick="openLinkedIn()"
+        >
+          <div class="flex-shrink contact-start">
+            <i class="material-icons">group</i>
+          </div>
+          <div class="flex-grow contact-end">LinkedIn</div>
+        </div>
+      </div>
     </section>
     <main>
       <section title="skills" class="flex-basis">

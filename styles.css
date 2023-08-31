@@ -5,7 +5,6 @@
 body {
   display: block;
   margin-top: 20px;
-
   background-image: url("./images/bg3.jpg");
   background-size: cover;
 }
@@ -16,7 +15,12 @@ body {
 .flex-row {
   display: flex;
   flex-direction: row;
+}
+.p-10 {
   padding: 10px;
+}
+.p-3 {
+  padding: 3px;
 }
 .border {
   border-radius: 10px;
@@ -26,6 +30,9 @@ body {
 }
 .flex-start {
   justify-content: start;
+}
+.flex-between {
+  justify-content: space-between;
 }
 .flex-pad {
   padding-left: 10px;
@@ -37,27 +44,76 @@ body {
   color: bisque;
 }
 .header-bg {
+  transition: 0.5s ease-in-out;
   background: rgb(29, 29, 29);
   background: -moz-linear-gradient(
     90deg,
-    rgba(29, 29, 29, 1) 53%,
+    rgba(29, 29, 29, 1) 70%,
     rgba(99, 99, 99, 0) 100%
   );
   background: -webkit-linear-gradient(
     90deg,
-    rgba(29, 29, 29, 1) 53%,
+    rgba(29, 29, 29, 1) 70%,
     rgba(99, 99, 99, 0) 100%
   );
   background: linear-gradient(
     90deg,
-    rgba(29, 29, 29, 1) 53%,
+    rgba(29, 29, 29, 1) 70%,
     rgba(99, 99, 99, 0) 100%
   );
 }
 .header-bg:hover {
   background-color: crimson;
-  transition: 0.5s;
   transform: translate(-5px);
+  cursor: crosshair;
+}
+.header-bg:hover #code {
+  opacity: 1;
+}
+#code {
+  opacity: 0;
+  user-select: none;
+  transition: 0.5s ease-in-out;
+}
+
+.contact-info {
+  gap: 10px;
+  margin-top: 5;
+}
+.contact-info-top {
+  margin: 0;
+  width: 25%;
+  border-radius: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+.contact-info-top:hover .contact-end {
+  border-right: 10px solid crimson;
+}
+.contact-info-top:hover {
+  transform: translate(0, -3px);
+}
+.contact-info div i {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.contact-start {
+  background-color: crimson;
+  padding: 2px;
+  padding-left: 5px;
+  border-radius: 10px 0 0 10px;
+}
+.contact-end {
+  background-color: gainsboro;
+  transition: 0.5s;
+  padding: 3px;
+  padding-left: 4px;
+  border-radius: 0 10px 10px 0;
+  border-right: 5px solid rgb(109, 109, 109);
 }
 .skills {
   background-color: bisque;
@@ -70,5 +126,14 @@ body {
   width: 50%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20px;
+  margin-top: 15px;
+}
+.flex-end {
+  justify-self: end;
+}
+.flex-grow {
+  flex-grow: 1;
+}
+.flex-shrink {
+  flex-shrink: 1;
 }
