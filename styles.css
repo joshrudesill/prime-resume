@@ -101,14 +101,14 @@ body {
   display: grid;
   gap: 10px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto auto auto;
 }
 
 .skills-item {
   display: flex;
   background-color: rgb(6, 165, 183);
   flex-direction: column;
-  border-radius: 10px;
+  border-radius: 8px;
   border: 3px solid rgb(4, 109, 121);
 }
 
@@ -116,8 +116,6 @@ body {
   padding: 15px;
   font-family: monospace;
   font-size: 2.5em;
-  border-bottom: 3px solid rgb(4, 109, 121);
-  border-radius: 10px;
 }
 .skills-sub-item {
   display: flex;
@@ -130,21 +128,107 @@ body {
   border-radius: 8px;
   vertical-align: text-top;
 }
+.skills-sub-item-react {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: rgb(4, 109, 121);
+  text-align: center;
+  border-bottom: 3px solid rgb(2, 49, 54);
+  padding: 4px;
+  border-radius: 8px;
+  vertical-align: text-top;
+}
 .skills-details {
   display: grid;
   gap: 10px;
   padding: 10px;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr;
 }
 .skills-sub-item:hover {
   background-color: rgb(209, 72, 22);
 }
 .js-item {
+  background-color: rgb(6, 165, 183);
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 1;
-  grid-row-end: 3;
+  grid-row-end: 2;
+}
+.js-item .skills-item-title {
+  background-color: rgb(4, 109, 121);
+  border-bottom: 3px solid rgb(8, 57, 62);
+}
+.db-item {
+  background-color: chocolate;
+  border: 3px solid rgb(155, 70, 10);
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.db-item .skills-item-title {
+  background-color: rgb(155, 70, 10);
+  border-bottom: 3px solid rgb(81, 50, 7);
+}
+.db-item .skills-sub-item {
+  background-color: rgb(155, 70, 10);
+  border-bottom: 3px solid rgb(74, 35, 8);
+}
+.db-item .skills-details {
+  grid-template-columns: 1fr;
+}
+.node-item {
+  background-color: rgb(212, 20, 122);
+  border: 3px solid rgb(156, 7, 87);
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.node-item .skills-item-title {
+  background-color: rgb(156, 7, 87);
+  border-bottom: 3px solid rgb(107, 12, 63);
+}
+.node-item .skills-sub-item {
+  background-color: rgb(156, 7, 87);
+  border-bottom: 3px solid rgb(107, 12, 63);
+}
+.node-item .skills-details {
+  grid-template-columns: 1fr;
+}
+
+.other-item {
+  background-color: rgb(204, 204, 195);
+  border: 3px solid rgb(156, 156, 149);
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 2;
+}
+.other-item .skills-item-title {
+  background-color: rgb(156, 156, 149);
+  border-bottom: 3px solid rgb(94, 94, 91);
+}
+.other-item-body {
+  padding: 10px;
+  display: flex;
+}
+.other-item-body p {
+  margin: 0px;
+  font-weight: 500;
+}
+.other-item-list {
+  list-style-type: none;
+  padding: 0;
+}
+.other-item-list li {
+  border: 1px solid black;
+  border-bottom: 3px solid black;
+  border-radius: 8px;
+  margin-bottom: 4px;
+  padding: 3px;
+  text-align: center;
 }
 .italic {
   font-style: italic;
