@@ -45,33 +45,15 @@ body {
 }
 .header-bg {
   transition: 0.5s ease-in-out;
-  background: rgb(29, 29, 29);
-  background: -moz-linear-gradient(
-    90deg,
-    rgba(29, 29, 29, 1) 70%,
-    rgba(99, 99, 99, 0) 100%
-  );
-  background: -webkit-linear-gradient(
-    90deg,
-    rgba(29, 29, 29, 1) 70%,
-    rgba(99, 99, 99, 0) 100%
-  );
-  background: linear-gradient(
-    90deg,
-    rgba(29, 29, 29, 1) 70%,
-    rgba(99, 99, 99, 0) 100%
-  );
+
+  background: linear-gradient(90deg, rgba(29, 29, 29, 1) 70%, crimson 100%);
 }
 .header-bg:hover {
-  background-color: crimson;
-  transform: translate(-5px);
   cursor: crosshair;
 }
-.header-bg:hover #code {
-  opacity: 1;
-}
+
 #code {
-  opacity: 0;
+  opacity: 1;
   user-select: none;
   transition: 0.5s ease-in-out;
 }
@@ -84,12 +66,12 @@ body {
   margin: 0;
   width: 25%;
   border-radius: 10px;
-  font-weight: bold;
+  font-weight: 400;
   letter-spacing: 1px;
   display: flex;
   flex-direction: row;
   cursor: pointer;
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 .contact-info-top:hover .contact-end {
   border-right: 10px solid crimson;
@@ -109,15 +91,60 @@ body {
 }
 .contact-end {
   background-color: gainsboro;
-  transition: 0.5s;
+  transition: 0.3s;
   padding: 3px;
   padding-left: 4px;
   border-radius: 0 10px 10px 0;
   border-right: 5px solid rgb(109, 109, 109);
 }
 .skills {
-  background-color: bisque;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.skills-item {
+  display: flex;
+  background-color: rgb(6, 165, 183);
+  flex-direction: column;
+  border-radius: 10px;
+  border: 3px solid rgb(4, 109, 121);
+}
+
+.skills-item-title {
+  padding: 15px;
+  font-family: monospace;
+  font-size: 2.5em;
+  border-bottom: 3px solid rgb(4, 109, 121);
+  border-radius: 10px;
+}
+.skills-sub-item {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  background-color: rgb(4, 109, 121);
+  text-align: center;
+  border-bottom: 3px solid rgb(2, 49, 54);
+  padding: 4px;
+  border-radius: 8px;
+  vertical-align: text-top;
+}
+.skills-details {
+  display: grid;
+  gap: 10px;
   padding: 10px;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+.skills-sub-item:hover {
+  background-color: rgb(209, 72, 22);
+}
+.js-item {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
 .italic {
   font-style: italic;
