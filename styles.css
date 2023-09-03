@@ -60,6 +60,8 @@ body {
 }
 
 .contact-info {
+  display: flex;
+  flex-direction: row;
   gap: 10px;
   margin-top: 5px;
 }
@@ -338,6 +340,12 @@ body {
 .italic {
   font-style: italic;
 }
+.section-title {
+  color: white;
+  letter-spacing: 3px;
+  font-size: 2.5em;
+  margin: 10px;
+}
 .flex-basis {
   width: 50%;
   margin-left: auto;
@@ -386,5 +394,84 @@ body {
 @media screen and (max-width: 1200px) {
   .flex-basis {
     width: 75%;
+  }
+  .section-title {
+    font-size: 2em;
+  }
+  .other-item-body {
+    flex-direction: column;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+  .other-item-body div {
+    padding: 2px;
+  }
+  .other-item-body p {
+    letter-spacing: 3px;
+    text-align: start;
+    padding: 5px;
+  }
+  .other-item-list {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-left: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .experience-section h2 {
+    font-size: 1.3em;
+  }
+  .ex-body li {
+    list-style-type: none;
+  }
+  .ex-body ul {
+    padding: 0;
+  }
+  .contact-info-top {
+    width: 100%;
+  }
+  .contact-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 980px) {
+  .flex-basis {
+    width: 100%;
+  }
+  .section-title {
+    font-size: 1.5em;
+  }
+  .skills {
+    grid-template-rows: auto auto auto auto;
+  }
+  .js-item {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .db-item {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .node-item {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .other-item {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+  .education-section {
+    font-size: 0.7em;
   }
 }
