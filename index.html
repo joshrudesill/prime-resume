@@ -13,11 +13,29 @@
   </head>
   <body>
     <section title="Josh Rudesill" id="top-info" class="flex-basis">
-      <header class="flex-row flex-between border header-bg p-10">
-        <span class="flex-pad heading-text">
-          Josh Rudesill - <span class="italic">Web Developer</span>
-        </span>
-        <span class="flex-pad heading-text flex-end" id="code">&lt;/&gt;</span>
+      <header class="border header-bg p-10">
+        <div class="flex-row flex-between">
+          <span class="flex-pad heading-text">
+            Josh Rudesill - <span class="italic">Web Developer</span>
+          </span>
+          <span class="flex-pad heading-text flex-end" id="code"
+            >&lt;/&gt;</span
+          >
+        </div>
+        <div class="fun-fact">
+          <div class="flex-row" style="gap: 10px">
+            <button id="fact-button" onclick="generateFunFact()">
+              Click for fun fact about me
+            </button>
+            <button id="fact-button" onclick="getQuote()">
+              Get a random Quote
+            </button>
+          </div>
+          <div class="fact">
+            <span id="fact-body"></span>
+            <span id="quote-body"></span>
+          </div>
+        </div>
       </header>
     </section>
     <section class="flex-basis">
@@ -102,18 +120,19 @@
             <div class="skills-item-title">Databases</div>
             <div class="skills-details">
               <div class="skills-sub-item">
-                <ion-icon
-                  name="logo-react"
-                  style="font-size: 2em; color: #61dbfb"
-                ></ion-icon>
+                <img src="images/mysql-icon.svg" alt="mysql logo" height="32" />
                 <span style="font-size: 1.5em">MySQL</span>
               </div>
               <div class="skills-sub-item">
-                <img src="images/next-js.svg" alt="Next.js" />
+                <img
+                  src="images/mongodb-icon.svg"
+                  alt="mongodb logo"
+                  height="32"
+                />
                 <span style="font-size: 1.5em">MongoDB</span>
               </div>
               <div class="skills-sub-item">
-                <img src="images/redux-original.svg" height="32" alt="Redux" />
+                <img src="images/redis-icon.svg" height="32" alt="redis" />
                 <span style="font-size: 1.5em">Redis</span>
               </div>
             </div>
@@ -122,18 +141,26 @@
             <div class="skills-item-title">Node.js</div>
             <div class="skills-details">
               <div class="skills-sub-item">
-                <ion-icon
-                  name="logo-react"
-                  style="font-size: 2em; color: #61dbfb"
-                ></ion-icon>
+                <img
+                  src="images/expressjs-icon.svg"
+                  height="32"
+                  alt="expressjs icon"
+                />
                 <span style="font-size: 1.5em">Express</span>
               </div>
               <div class="skills-sub-item">
-                <img src="images/next-js.svg" alt="Next.js" />
+                <ion-icon
+                  name="repeat-outline"
+                  style="font-size: 2em"
+                ></ion-icon>
                 <span style="font-size: 1.5em">Websockets</span>
               </div>
               <div class="skills-sub-item">
-                <img src="images/redux-original.svg" height="32" alt="Redux" />
+                <img
+                  src="images/socketio-icon.svg"
+                  height="32"
+                  alt="socketio icon"
+                />
                 <span style="font-size: 1.5em">Socket.io</span>
               </div>
             </div>

@@ -43,20 +43,52 @@ body {
   font-size: 3em;
   font-weight: 500;
   color: bisque;
+  border-bottom: 1px solid white;
 }
 .header-bg {
-  transition: 0.5s ease-in-out;
+  transition: 1.5s ease-in-out;
 
   background: linear-gradient(90deg, rgba(29, 29, 29, 1) 70%, crimson 100%);
 }
 .header-bg:hover {
   cursor: crosshair;
 }
+.fun-fact {
+  display: flex;
+  flex-direction: column;
+}
+.fact {
+  color: honeydew;
+  font-weight: 200;
+  display: flex;
+  flex-direction: column;
+}
+.fun-fact button {
+  display: flex;
+  color: honeydew;
+  cursor: pointer;
+  border: none;
+  font-weight: 200;
+  font-size: medium;
+  padding: 5px;
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: blueviolet;
+  width: fit-content;
+  transition: 0.4s ease-in-out;
+}
+.fun-fact button:hover {
+  background-color: rgb(94, 32, 151);
+}
+.fun-fact button:disabled {
+  background-color: rgb(42, 9, 74);
+}
 
 #code {
   opacity: 1;
   user-select: none;
   transition: 0.5s ease-in-out;
+  border: none;
 }
 
 .contact-info {
